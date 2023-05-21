@@ -1,13 +1,13 @@
 # svg2canvas
 Convert your svg to code
 
-## Example
+## Example Python Tkinter
 
 Source svg:
 <img src="./Examples/pic.svg">
 
 ```bash
-svg2canvas -i pic.svg -o output
+svg2canvas -i Examples/pic.svg -o output
 ```
 
 will produce output.py:
@@ -32,3 +32,44 @@ top.mainloop()
 Result:
 
 <img src="./Examples/tkinter.png">
+
+## Example Python Swift UI
+
+Using next command you can generate code for Swift UIKit:
+```bash
+./svg2canvas.py -i Examples/pic.svg -t swift-uikit  -o swift_canvas
+```
+
+will produce swift_canvas.swift:
+
+```swift
+import UIKit
+class GeneratedCanvasView: UIView {
+    override func draw(_ rect: CGRect) {
+        let path3 = UIBezierPath(rect: CGRect(x:92.3991503679552, y:70.7260766172576, width: 160.98007181108161, height: 110.5335072471168))
+        path3.lineWidth = 0.9999992801568001
+        UIColor(hex: 0x000000).setFill()
+        path3.stroke()
+        path3.fill()
+        let path4 = UIBezierPath(rect: CGRect(x:123.2664816819744, y:222.8492365589952, width: 68.6995948930368, height: 154.60352915515202))
+        path4.lineWidth = 0.9999992801568001
+        UIColor(hex: 0x000000).setFill()
+        path4.stroke()
+        path4.fill()
+        let path5 = UIBezierPath(ovalIn: CGRect(x:23.837217281539203, y:183.74560007296418, width: 83.01996042130561, height: 55.73453768718528))
+        path5.lineWidth = 0.9999992801568001
+        UIColor(hex: 0x000000).setFill()
+        path5.stroke()
+        path5.fill()
+        let path6 = UIBezierPath(rect: CGRect(x:304.9625256245568, y:75.7485461010432, width: 211.2181272860736, height: 108.0223802218176))
+        path6.lineWidth = 8.938587504000001
+        UIColor(hex: 0x000000).setStroke()
+        path6.stroke()
+        ...
+    }
+}
+```
+
+Result (was used transformation to scale the result):
+
+<img src="./Examples/ios.png">

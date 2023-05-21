@@ -4,9 +4,11 @@ import sys
 from enum import Enum
 from svgelements import *
 from PyTkConverter import PyTkConverter
+from SwiftConverter import SwiftConverter
 
 class ConverterType(Enum):
     pytkinter = 'python-tk'
+    swiftuikit = 'swift-uikit'
 
     def __str__(self):
         return self.value
@@ -20,10 +22,19 @@ def arg_parser(argv):
 
 def main(argv) -> int:
     args = arg_parser(argv)
-    converter = PyTkConverter()
+    converter = None
+    openFileName = "file"
+    match args.type:
+        case ConverterType.pytkinter:
+            converter = PyTkConverter()
+            openFileName = args.output_file + ".py"
+        case ConverterType.swiftuikit:
+            converter = SwiftConverter()
+            openFileName = args.output_file + ".swift"
+
 
     data = converter.convert(args.input_file)
-    output_file = open(args.output_file + ".py", "w")
+    output_file = open(openFileName, "w")
     output_file.write(data)
     return 0
 

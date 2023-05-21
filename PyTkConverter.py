@@ -32,7 +32,7 @@ class PyTkConverter(ConverterABC):
                         data += f"canvas.create_line({segment.start.x}, {segment.start.y}, {segment.end.x}, {segment.end.y}, width={element.stroke_width}, fill=\"{stroke}\")\n"
                     elif type(segment) is CubicBezier:
                         shouldAddBezierFunction = True
-                        data += f"draw_cubic_bezier(canvas, ({segment.start}), ({segment.end}), ({segment.control1}), ({segment.control1}), {element.stroke_width}, \"{stroke}\")\n"
+                        data += f"draw_cubic_bezier(canvas, ({segment.start}), ({segment.end}), ({segment.control1}), ({segment.control2}), {element.stroke_width}, \"{stroke}\")\n"
         
         data += self.__prepareEndString()
         if shouldAddBezierFunction:
