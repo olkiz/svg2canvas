@@ -1,17 +1,17 @@
 # svg2canvas
 Convert your svg to code
 
-## example
+## Example
 
 Source svg:
 <img src="./Examples/pic.svg">
 
-'''bash
+```bash
 svg2canvas -i pic.svg -o output
-'''
+```
 
 will produce output.py:
-'''python
+```python
 import tkinter
 top = tkinter.Tk()
 canvas = tkinter.Canvas(top, bg="white", height=1122.5202912, width=793.7012159999999)
@@ -33,7 +33,8 @@ canvas.create_line(534.262512123648, 702.836940161664, 323.0443583808672, 702.83
 canvas.create_line(323.0443583808672, 702.836940161664, 314.22371865709437, 567.079978663968, width=8.938587504000001, fill="#2fa544")
 canvas.pack()
 top.mainloop()
-'''
+```
 
 Result:
+
 <img src="./Examples/tkinter.png">
