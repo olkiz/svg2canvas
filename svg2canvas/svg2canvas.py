@@ -3,8 +3,8 @@ import argparse
 import sys
 from enum import Enum
 from svgelements import *
-from .svg2canvasUtils.PyTkConverter import PyTkConverter
-from .svg2canvasUtils.SwiftConverter import SwiftConverter
+from svg2canvas.svg2canvasUtils.PyTkConverter import PyTkConverter
+from svg2canvas.svg2canvasUtils.SwiftConverter import SwiftConverter
 
 class ConverterType(Enum):
     pytkinter = 'python-tk'

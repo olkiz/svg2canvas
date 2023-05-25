@@ -1,5 +1,5 @@
 import unittest
-from ..svg2canvas.svg2canvasUtils.SwiftConverter import SwiftConverter
+from svg2canvas.svg2canvasUtils.SwiftConverter import SwiftConverter
 
 class PyTkConverterTestCase(unittest.TestCase):
     def test_empty_file(self):
@@ -8,6 +8,7 @@ class PyTkConverterTestCase(unittest.TestCase):
         result = converter.convert("tests/TestSVG/empty.svg")
         expected = open("tests/TestSwiftUIKit/TestEmptySwift.txt", "r")
         self.assertEqual(result, expected.read())
+        expected.close()
 
 if __name__ == '__main__':
     unittest.main()
