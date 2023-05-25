@@ -1,5 +1,6 @@
 # svg2canvas
 Convert your svg to code
+
 <img src="https://github.com/olkiz/svg2canvas/actions/workflows/python-app.yml/badge.svg">
 
 ## Install
