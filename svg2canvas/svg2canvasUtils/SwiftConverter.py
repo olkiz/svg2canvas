@@ -1,5 +1,5 @@
 from svgelements import *
-from ConverterABC import ConverterABC
+from .ConverterABC import ConverterABC
 
 class SwiftConverter(ConverterABC):
     def convert(self, file) -> str:
@@ -66,5 +66,4 @@ class GeneratedCanvasView: UIView {
     }}
 }}
 let generatedCanvasView = GeneratedCanvasView(frame: CGRect(x: 0, y: 0, width: {width}, height: {height}))
-
 """

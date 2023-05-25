@@ -1,0 +1,5 @@
+import tkinter
+top = tkinter.Tk()
+canvas = tkinter.Canvas(top, bg="white", height=1122.5202912, width=793.7012159999999)
+canvas.pack()
+top.mainloop()

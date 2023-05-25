@@ -1,5 +1,5 @@
 from svgelements import *
-from ConverterABC import ConverterABC
+from .ConverterABC import ConverterABC
 
 class PyTkConverter(ConverterABC):
     def convert(self, file) -> str:
@@ -44,7 +44,7 @@ class PyTkConverter(ConverterABC):
         if shouldAddBezierFunction:
             data = self.__prepareImportString() + self.__addBezierFunction() + self.__prepareStartString(svg.width, svg.height) + data
         else:
-            data = self.__prepareImportString() + self.__prepareStartString() + data
+            data = self.__prepareImportString() + self.__prepareStartString(svg.width, svg.height) + data
         return data
 
     def __prepareImportString(self) -> str:

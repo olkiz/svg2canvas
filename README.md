@@ -1,6 +1,12 @@
 # svg2canvas
 Convert your svg to code
 
+## Install
+
+```bash
+pip install .
+```
+
 ## Example Python Tkinter
 
 Source svg:
@@ -33,7 +39,7 @@ Result:
 
 <img src="./Examples/tkinter.png">
 
-## Example Python Swift UI
+## Example Python Swift UIKit
 
 Using next command you can generate code for Swift UIKit:
 ```bash
