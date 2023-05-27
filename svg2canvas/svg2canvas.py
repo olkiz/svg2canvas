@@ -33,7 +33,7 @@ def main() -> int:
             openFileName = args.output_file + ".swift"
 
 
-    data = converter.convertFile(args.input_file)
+    data = converter.convert(args.input_file)
     output_file = open(openFileName, "w")
     output_file.write(data)
     return 0

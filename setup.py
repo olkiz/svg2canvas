@@ -8,7 +8,7 @@ installRequires = (pathlib.Path(__file__).parent.resolve() / "requirements.txt")
 
 setup(
     name="svg2canvas",
-    version="0.1.0",
+    version="0.1.1",
     description="Convert your svg to code ",
     long_description=longDescription,
     url="https://github.com/olkiz/svg2canvas",
