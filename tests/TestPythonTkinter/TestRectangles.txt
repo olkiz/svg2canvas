@@ -1,0 +1,7 @@
+import tkinter
+top = tkinter.Tk()
+canvas = tkinter.Canvas(top, bg="white", height=1122.5202912, width=793.7012159999999)
+canvas.create_rectangle(91.6225590824544, 264.762114625008, 249.52634324808957, 357.675424640688, width=4.403151984, fill="#28389f", outline="#43a52f")
+canvas.create_rectangle(366.4744038803232, 296.0778115354752, 481.7867067788544, 411.39011443400636, width=4.403151984, fill="#7f3838", outline="#43a52f")
+canvas.pack()
+top.mainloop()

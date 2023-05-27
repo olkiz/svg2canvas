@@ -1,0 +1,32 @@
+import UIKit
+extension UIColor {
+    init(hex: UInt) {
+        self.init(red: CGFloat((hex >> 16) & 0xFF), green: CGFloat((hex >> 8) & 0xFF), blue: CGFloat(hex & 0xFF), alpha: 1.0)
+    }
+}
+class GeneratedCanvasView: UIView {
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        backgroundColor = .white
+
+        setNeedsDisplay()
+    }
+
+    override func draw(_ rect: CGRect) {
+        let path3 = UIBezierPath(rect: CGRect(x:91.6225590824544, y:264.762114625008, width: 157.9037841656352, height: 92.91331001568001))
+        path3.lineWidth = 4.403151984
+        UIColor(hex: 0x43a52f).setStroke()
+        UIColor(hex: 0x28389f).setFill()
+        path3.stroke()
+        path3.fill()
+        let path4 = UIBezierPath(rect: CGRect(x:366.4744038803232, y:296.0778115354752, width: 115.3123028985312, height: 115.3123028985312))
+        path4.lineWidth = 4.403151984
+        UIColor(hex: 0x43a52f).setStroke()
+        UIColor(hex: 0x7f3838).setFill()
+        path4.stroke()
+        path4.fill()
+
+    }
+}
+let generatedCanvasView = GeneratedCanvasView(frame: CGRect(x: 0, y: 0, width: 793.7012159999999, height: 1122.5202912))
